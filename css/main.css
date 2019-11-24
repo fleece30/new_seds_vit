@@ -1,17 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-body, html {
+html, body {
   padding: 0;
   margin: 0;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   max-width: 100%;
   font-family: 'Montserrat';
+  overflow-x: hidden;
+  color: #C6C6C6;
+}
+
+.bg {
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
   background-image: url("../images/universe.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  text-decoration: none;
-  overflow-x: hidden;
-  color: #C6C6C6;
 }
 
 header {
@@ -28,13 +37,12 @@ section {
   color: #C6C6C6;
   font-size: 100px;
   font-weight: bolder;
-  width: 100%;
   max-width: 100%;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-70%);
           transform: translateY(-70%);
-  right: -60%;
+  left: 60%;
 }
 
 section #subtext {
@@ -56,15 +64,6 @@ nav {
   padding: 2em;
   width: calc(100% - 4em);
   height: calc(100vh - 4em);
-}
-
-nav .back {
-  opacity: 0;
-  max-width: 100%;
-  background-image: url("../images/blur_bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 nav .close_btn {
@@ -335,13 +334,12 @@ nav li {
     color: #C6C6C6;
     font-size: 50px;
     font-weight: bolder;
-    width: 100%;
     max-width: 100%;
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-70%);
             transform: translateY(-70%);
-    right: -40vw;
+    left: 40%;
   }
   section #subtext {
     font-weight: bold;
@@ -376,17 +374,16 @@ nav li {
     color: #C6C6C6;
     font-size: 80px;
     font-weight: bolder;
-    width: 100%;
     max-width: 100%;
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-70%);
             transform: translateY(-70%);
-    right: -60vw;
+    left: 55%;
   }
   section #subtext {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 500;
     position: absolute;
   }
