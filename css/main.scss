@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+body, html{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    max-width: 100%;
+    font-family: 'Montserrat';
+    background-image: url("../images/universe.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-decoration: none;
+    overflow-x: hidden;
+    color: #C6C6C6;
+}
+
+header{
+    padding: 2.3em;
+
+    .menu_btn{
+        width: 30px;
+        float: right;
+        cursor: pointer;
+    }
+}
+
+section {
+    color: #C6C6C6;
+    font-size: 100px;
+    font-weight: bolder;
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-70%);
+    right: -60%;
+
+
+    #subtext {
+        font-weight: bold;
+        font-size: 25px;
+        font-weight: 500;
+        position: absolute;
+    }
+}
+
+nav {
+    z-index: 100;
+    display: none;
+    position: absolute;
+    background-color: black;
+    transform: scaleX(1);
+    transform-origin: right;
+    padding: 2em;
+    width: calc(100% - 4em);
+    height: calc(100vh - 4em);
+
+    .back {
+        opacity: 0;
+        max-width: 100%;
+        background-image: url('../images/blur_bg.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .close_btn{
+        opacity: 0;
+        width: 30px;
+        float: right;
+        cursor: pointer;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 10% auto 0 auto;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+    }
+    a{
+        text-decoration: none;
+        color: #C6C6C6;
+        font-weight: bold;
+        font-size: 50px;
+    }
+    li {
+        opacity: 0;
+        margin: 50px;
+        margin-bottom: 40px;
+    }
+}
+
+.show_nav {
+    display: block;
+    animation: slide-menu 0.2s ease-in forwards;
+    .close_btn {
+        animation: cross 0.2s ease-in 0.2s forwards;
+    }
+    li:nth-of-type(1) {
+        animation: slide-item 0.4s forwards 0.4s ease-in-out;
+    }
+    li:nth-of-type(2) {
+        animation: slide-item 0.4s ease-in-out 0.5s forwards;
+    }
+    li:nth-of-type(3) {
+        animation: slide-item 0.4s ease-in-out 0.6s forwards;
+    }
+    li:nth-of-type(4) {
+        animation: slide-item 0.4s ease-in-out 0.7s forwards;
+    }
+    li:nth-of-type(5) {
+        animation: slide-item 0.4s ease-in-out 0.8s forwards;
+    }
+    li:nth-of-type(6) {
+        animation: slide-item 0.4s ease-in-out 0.9s forwards;
+    }
+}
+
+.hide_nav {
+    .close_btn {
+        animation: hide-cross 0.2s ease-out forwards;
+    }
+    li:nth-of-type(1) {
+        animation: hide-item 0.4s forwards ease-out;
+    }
+    li:nth-of-type(2) {
+        animation: hide-item 0.4s ease-out forwards;
+    }
+    li:nth-of-type(3) {
+        animation: hide-item 0.4s ease-out forwards;
+    }
+    li:nth-of-type(4) {
+        animation: hide-item 0.4s ease-out forwards;
+    }
+    li:nth-of-type(5) {
+        animation: hide-item 0.4s ease-out forwards;
+    }
+    li:nth-of-type(6) {
+        animation: hide-item 0.4s ease-out forwards;
+    }
+    
+    animation: hide-menu 0.2s ease-out 0.6s forwards;
+}
+
+@keyframes slide-menu {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes cross {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-item {
+    from {
+        transform: translateY(60%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hide-menu {
+    from {
+        transform: scaleX(1);
+    }
+    to {
+        transform: scaleX(0);
+    }
+}
+
+@keyframes hide-cross {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes hide-item {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(60%);
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+}

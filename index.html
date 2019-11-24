@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>SEDS VIT</title>
+</head>
+<body>
+    <nav id="overlay">
+        <div class="back">
+            
+        </div>
+        <img src="images/close.svg" id="close_menu" class="close_btn">
+
+        <ul>
+            <li>
+                <a href="index.html">home</a><br>
+                <span>Reach for the stars</span>
+            </li>
+            <li>
+                <a href="#">who we are</a><br>
+                <span>Come on... I'll introduce you</span>
+            </li>
+            <li>
+                <a href="#">events</a><br>
+                <span>Here's what we do</span>
+            </li>
+            <li>
+                <a href="#">blog</a><br>
+                <span>Read the latest from us</span>
+            </li>
+            <li>
+                <a href="#">members</a><br>
+                <span>The people who make it happen</span>
+            </li>
+            <li>
+                <a href="#">contact</a><br>
+                <span>We would love to hear from you</span>
+            </li>
+        </ul>
+    </nav>
+
+    <header>
+        <img src="images/menu.svg" id="open_menu" class="menu_btn">
+    </header>
+
+    <section>
+        <b>SEDS VIT</b><br>
+        <span id="subtext">REACH FOR THE STARS</span>
+    </section>
+
+    <script>
+        var overlay = document.getElementById("overlay");
+        document.getElementById("open_menu").addEventListener('click', function(){
+            overlay.classList.add('show_nav');
+            overlay.classList.remove('hide_nav');
+        });
+        document.getElementById("close_menu").addEventListener('click', function(){
+            overlay.classList.add('hide_nav');
+        });
+    </script>
+
+</body>
+</html>

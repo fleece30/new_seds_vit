@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  max-width: 100%;
+  font-family: 'Montserrat';
+  background-image: url("../images/universe.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-decoration: none;
+  overflow-x: hidden;
+  color: #C6C6C6;
+}
+
+header {
+  padding: 2.3em;
+}
+
+header .menu_btn {
+  width: 30px;
+  float: right;
+  cursor: pointer;
+}
+
+section {
+  color: #C6C6C6;
+  font-size: 100px;
+  font-weight: bolder;
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-70%);
+          transform: translateY(-70%);
+  right: -60%;
+}
+
+section #subtext {
+  font-weight: bold;
+  font-size: 25px;
+  font-weight: 500;
+  position: absolute;
+}
+
+nav {
+  z-index: 100;
+  display: none;
+  position: absolute;
+  background-color: black;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  padding: 2em;
+  width: calc(100% - 4em);
+  height: calc(100vh - 4em);
+}
+
+nav .back {
+  opacity: 0;
+  max-width: 100%;
+  background-image: url("../images/blur_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav .close_btn {
+  opacity: 0;
+  width: 30px;
+  float: right;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 10% auto 0 auto;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (33%)[3];
+      grid-template-columns: repeat(3, 33%);
+}
+
+nav a {
+  text-decoration: none;
+  color: #C6C6C6;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+nav li {
+  opacity: 0;
+  margin: 50px;
+  margin-bottom: 40px;
+}
+
+.show_nav {
+  display: block;
+  -webkit-animation: slide-menu 0.2s ease-in forwards;
+          animation: slide-menu 0.2s ease-in forwards;
+}
+
+.show_nav .close_btn {
+  -webkit-animation: cross 0.2s ease-in 0.2s forwards;
+          animation: cross 0.2s ease-in 0.2s forwards;
+}
+
+.show_nav li:nth-of-type(1) {
+  -webkit-animation: slide-item 0.4s forwards 0.4s ease-in-out;
+          animation: slide-item 0.4s forwards 0.4s ease-in-out;
+}
+
+.show_nav li:nth-of-type(2) {
+  -webkit-animation: slide-item 0.4s ease-in-out 0.5s forwards;
+          animation: slide-item 0.4s ease-in-out 0.5s forwards;
+}
+
+.show_nav li:nth-of-type(3) {
+  -webkit-animation: slide-item 0.4s ease-in-out 0.6s forwards;
+          animation: slide-item 0.4s ease-in-out 0.6s forwards;
+}
+
+.show_nav li:nth-of-type(4) {
+  -webkit-animation: slide-item 0.4s ease-in-out 0.7s forwards;
+          animation: slide-item 0.4s ease-in-out 0.7s forwards;
+}
+
+.show_nav li:nth-of-type(5) {
+  -webkit-animation: slide-item 0.4s ease-in-out 0.8s forwards;
+          animation: slide-item 0.4s ease-in-out 0.8s forwards;
+}
+
+.show_nav li:nth-of-type(6) {
+  -webkit-animation: slide-item 0.4s ease-in-out 0.9s forwards;
+          animation: slide-item 0.4s ease-in-out 0.9s forwards;
+}
+
+.hide_nav {
+  -webkit-animation: hide-menu 0.2s ease-out 0.6s forwards;
+          animation: hide-menu 0.2s ease-out 0.6s forwards;
+}
+
+.hide_nav .close_btn {
+  -webkit-animation: hide-cross 0.2s ease-out forwards;
+          animation: hide-cross 0.2s ease-out forwards;
+}
+
+.hide_nav li:nth-of-type(1) {
+  -webkit-animation: hide-item 0.4s forwards ease-out;
+          animation: hide-item 0.4s forwards ease-out;
+}
+
+.hide_nav li:nth-of-type(2) {
+  -webkit-animation: hide-item 0.4s ease-out forwards;
+          animation: hide-item 0.4s ease-out forwards;
+}
+
+.hide_nav li:nth-of-type(3) {
+  -webkit-animation: hide-item 0.4s ease-out forwards;
+          animation: hide-item 0.4s ease-out forwards;
+}
+
+.hide_nav li:nth-of-type(4) {
+  -webkit-animation: hide-item 0.4s ease-out forwards;
+          animation: hide-item 0.4s ease-out forwards;
+}
+
+.hide_nav li:nth-of-type(5) {
+  -webkit-animation: hide-item 0.4s ease-out forwards;
+          animation: hide-item 0.4s ease-out forwards;
+}
+
+.hide_nav li:nth-of-type(6) {
+  -webkit-animation: hide-item 0.4s ease-out forwards;
+          animation: hide-item 0.4s ease-out forwards;
+}
+
+@-webkit-keyframes slide-menu {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes slide-menu {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes cross {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cross {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-item {
+  from {
+    -webkit-transform: translateY(60%);
+            transform: translateY(60%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-item {
+  from {
+    -webkit-transform: translateY(60%);
+            transform: translateY(60%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes hide-menu {
+  from {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  to {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+
+@keyframes hide-menu {
+  from {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  to {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+
+@-webkit-keyframes hide-cross {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes hide-cross {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes hide-item {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(60%);
+            transform: translateY(60%);
+    opacity: 0;
+  }
+}
+
+@keyframes hide-item {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(60%);
+            transform: translateY(60%);
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
