@@ -299,6 +299,7 @@ nav li {
 
 .container .card:hover .face.face1 .content {
   opacity: 1;
+  color: white;
 }
 
 .container .card .face.face2 .content p {
